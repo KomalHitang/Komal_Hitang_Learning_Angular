@@ -17,8 +17,8 @@
     <P> Vin number:{{Car.vinNumber}}</P>
     <p>Admin Status: {{Car.hasOwner}}</p>
 
-<!--    <p *ngif="Car.hasOwner; else noOwner"> This car have already an owner</p>-->
-<!--    <ng-template #noOwner><p> No Owner </p></ng-template>-->
+    <p *ngif="Car.hasOwner; else noOwner"> This car have already an owner</p>
+    <ng-template #noOwner><p> No Owner </p></ng-template>
 
     <!-- button to toggle admin status -->
     <button (click)="toggleAdminStatus(Car)" class="toggle-button">
