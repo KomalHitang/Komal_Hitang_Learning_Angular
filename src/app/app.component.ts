@@ -13,6 +13,7 @@ import {Car} from "./car/car";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  title = 'untitled';
   car1: Car = {model: 'BMW X3', color: 'red', type: 'X3', brand: 'bmw', vinNumber: 8763523586, hasOwner: true};
   car2: Car = {model: 'Ford 56', color: 'black', type: '56 Forda', brand: 'Ford', vinNumber: 7863786, hasOwner: false};
   car3: Car = {model: 'Toyota P3', color: 'yellow', type: 'X3', brand: 'Toyota', vinNumber: 478568745, hasOwner: true};
