@@ -1,6 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {NgForOf} from "@angular/common";
 import {Car} from "../car/car";
+import {CarListItemComponent} from "../car-list-item/car-list-item.component";
 // @ts-ignore
 
 
@@ -13,6 +14,7 @@ class car {
   standalone: true,
   imports: [
     NgForOf,
+    CarListItemComponent,
 
 
   ],
@@ -65,7 +67,7 @@ export class CarListComponent {
       }];
   //Catch the onclick event from the html
   selectedcar?: car;
-  //function to set which student to display
+  //function to set which car to display
   @Input() Car!: any;
   choosedcar: any;
   selectcar(choosedcar:car): void {

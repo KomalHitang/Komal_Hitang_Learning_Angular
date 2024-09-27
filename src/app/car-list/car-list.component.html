@@ -1,16 +1,8 @@
-<div>
-  <table>
-    <tbody>
-    <tr *ngFor="let Car of carList" (click)="selectcar(Car)" >
+<app-car-list-item>{{carList[0].brand}}</app-car-list-item>
+<app-car-list-item>{{carList[0].color}}</app-car-list-item>
+<app-car-list-item>{{carList[0].type}}</app-car-list-item>
+<app-car-list-item>{{carList[0].model}}</app-car-list-item>
+<app-car-list-item>{{carList[0].vinNumber}}</app-car-list-item>
+<app-car-list-item>{{carList[0].hasOwner}}</app-car-list-item>
+<app-car-list-item>{{carList[0].image}}</app-car-list-item>
 
-      <td>{{ Car.model}}</td>
-      <td>{{ Car.color }}</td>
-      <td>{{ Car.type }}</td>
-      <td>{{ Car.brand}}</td>
-      <td>{{Car.vinNumber}}</td>
-      <td>{{ Car.hasOwner ? 'Yes' : 'No' }}</td>
-    </tr>
-    </tbody>
-  </table>
-  <app-car-list [Car]="choosedcar"></app-car-list>
-</div>
