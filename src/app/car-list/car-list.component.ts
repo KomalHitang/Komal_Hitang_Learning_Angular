@@ -4,9 +4,10 @@ import { Car } from '../car/car';
 @Component({
   selector: 'app-content-list',
   templateUrl: './content-list.component.html',
+  standalone: true,
   styleUrls: ['./content-list.component.css']
 })
-export class ContentListComponent {
+export class CarListComponent {
   chosenContent = 'car';
   carList: Car[] = [
     {
