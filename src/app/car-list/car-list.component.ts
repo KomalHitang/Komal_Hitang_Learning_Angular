@@ -17,7 +17,7 @@ export class CarListComponent {
       color: 'black',
       brand: 'Toyota',
       hasOwner: false,
-      image: 'assets/images/download.jpg'
+      image: 'download.jpg'
     },
     {
       type: 'ford',
@@ -26,7 +26,7 @@ export class CarListComponent {
       color: 'blue',
       brand: 'Ford',
       hasOwner: true,
-      image: 'assets/images/mustang.jpg'
+      image: 'mustang.jpg'
     },
     {
       type: 'tesla',
@@ -35,7 +35,7 @@ export class CarListComponent {
       color: 'black',
       brand: 'Tesla',
       hasOwner: false,
-      image: 'assets/images/tesla.jpg'
+      image: 'tesla.jpg'
     },
     {
       type: 'honda',
@@ -44,7 +44,7 @@ export class CarListComponent {
       color: 'black',
       brand: 'Honda',
       hasOwner: true,
-      image: 'assets/images/civic.jpg'
+      image: 'civic.jpg'
     }
   ];
 }
