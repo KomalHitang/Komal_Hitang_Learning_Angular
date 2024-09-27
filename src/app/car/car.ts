@@ -5,5 +5,6 @@ export interface Car {
   brand:string;
   vinNumber:number;
   hasOwner?:boolean;
+  image:string;
 
 }
