@@ -1,31 +1,13 @@
-.container {
-  margin: 20px;
+.even-item {
+  background-color: pink;
 }
 
-h2 {
-  text-align: center;
+.odd-item {
+  background-color: teal;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-}
+.app-car-list-item {
+  padding: 10px; /* Optional: Add some padding */
+  margin: 5px 0; /* Optional: Add margin for spacing */
 
-th, td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
-
-th {
-  background-color: hotpink;
-}
-
-tr:nth-child(even) {
-  background-color: lightpink;
-}
-
-tr:hover {
-  background-color: deeppink;
 }

@@ -1,7 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {NgForOf} from "@angular/common";
 import {Car} from "../car/car";
-import {CarListItemComponent} from "../car-list-item/car-list-item.component";
 // @ts-ignore
 
 
@@ -14,7 +13,6 @@ class car {
   standalone: true,
   imports: [
     NgForOf,
-    CarListItemComponent,
 
 
   ],

@@ -1,15 +1,4 @@
-.even-item {
-  background-color: pink;
-}
 
-.odd-item {
-  background-color: teal;
-}
-
-.app-car-list-item {
-  padding: 10px; /* Optional: Add some padding */
-  margin: 5px 0; /* Optional: Add margin for spacing */
-}
 .car-details{
   border:2px solid black;
 }
