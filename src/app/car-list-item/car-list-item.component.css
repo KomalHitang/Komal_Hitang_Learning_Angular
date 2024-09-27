@@ -1,4 +1,5 @@
-
-.car-details{
-  border:2px solid black;
+.car-details {
+  border: 2px solid black;
+  padding: 10px; /* Optional: Add some padding */
+  margin: 5px 0; /* Optional: Add margin for spacing */
 }

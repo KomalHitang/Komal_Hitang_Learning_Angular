@@ -1,9 +1,9 @@
-<div *ngIf="Car" class="car-details" >
-  <h1>Car Details</h1>
-  <p><strong>model</strong> {{ Car.model }}</p>
-  <p><strong>type</strong> {{ Car.type }}</p>
-  <p><strong>brand</strong> {{ Car.brand }}</p>
-  <p><strong>color</strong> {{ car.color}}</p>
-  <p><strong>vinNumber</strong>{{Car.vinNumber}}</p>
-  <p><strong>hasOwner</strong> {{ Car.hasOWner ? 'Yes' : 'No' }}</p>
+<div *ngIf="car" class="car-details">
+  <h2>{{ car.model }}</h2>
+  <p><strong>Type:</strong> {{ car.type }}</p>
+  <p><strong>Brand:</strong> {{ car.brand }}</p>
+  <p><strong>Color:</strong> {{ car.color }}</p>
+  <p><strong>VIN Number:</strong> {{ car.vinNumber }}</p>
+  <p><strong>Has Owner:</strong> {{ car.hasOwner ? 'Yes' : 'No' }}</p>
+  <img [src]="car.image" alt="{{ car.model }} image" />
 </div>

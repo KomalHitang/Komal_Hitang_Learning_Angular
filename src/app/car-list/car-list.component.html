@@ -1,16 +1,7 @@
 <div>
-  <table>
-    <tbody>
-    <tr *ngFor="let Car of carList" (click)="selectcar(Car)" >
-
-      <td>{{ Car.model}}</td>
-      <td>{{ Car.color }}</td>
-      <td>{{ Car.type }}</td>
-      <td>{{ Car.brand}}</td>
-      <td>{{Car.vinNumber}}</td>
-      <td>{{ Car.hasOwner ? 'Yes' : 'No' }}</td>
-    </tr>
-    </tbody>
-  </table>
-  <app-car-list [Car]="choosedcar"></app-car-list>
+  <h1>Car List</h1>
+  <div *ngFor="let car of carList; let i = index" [ngClass]="i % 2 === 0 ? 'even-item' : 'odd-item'">
+    <app-car-list-item class="app-car-list-item" [car]="car"></app-car-list-item>
+  </div>
 </div>
+
