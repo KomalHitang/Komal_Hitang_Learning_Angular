@@ -1,6 +1,6 @@
 <div>
   <h1>Car List</h1>
-  <div *ngFor="let Car of carList">
+  <div *ngFor="let Car of carList; even as isEven; " [class]="isEven ? 'even-item': 'odd-item'">
     <app-car-list-item class="app-car-list-item" [car]="Car"></app-car-list-item>
   </div>
 </div>

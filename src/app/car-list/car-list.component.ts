@@ -1,11 +1,17 @@
 import { Component } from '@angular/core';
 import { Car } from '../car/car';
+import {CarListItemComponent} from "../car-list-item/car-list-item.component";
+import {NgForOf} from "@angular/common";
 
 @Component({
-  selector: 'app-content-list',
-  templateUrl: './content-list.component.html',
+  selector: 'app-car-list',
+  templateUrl: './car-list.component.html',
   standalone: true,
-  styleUrls: ['./content-list.component.css']
+  imports: [
+    CarListItemComponent,
+    NgForOf
+  ],
+  styleUrls: ['./car-list.component.css']
 })
 export class CarListComponent {
   chosenContent = 'car';
