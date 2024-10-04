@@ -1,10 +1,7 @@
-export interface Car {
-  model: string;
-  color:string;
-  type:string;
-  brand:string;
-  vinNumber:number;
-  hasOwner?:boolean;
-  image:string;
-
+export interface car {
+  id: number;
+  name: string;
+  year: number;
+  model: string
 }
+
