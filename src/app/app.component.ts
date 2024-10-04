@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {NgForOf} from "@angular/common";
 import{NgIf} from "@angular/common";
-import {Car} from "./car/car";
 import {CarListComponent} from "./car-list/car-list.component";
 
 @Component({

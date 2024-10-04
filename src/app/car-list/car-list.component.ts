@@ -1,51 +1,41 @@
 import { Component } from '@angular/core';
-import { Car } from '../car/car';
+import { car } from '../car/car';
+import {CarListItemComponent} from "../car-list-item/car-list-item.component";
+import {carService} from "../service/car.service";
+import {NgForOf} from "@angular/common";
+
+
+
 
 @Component({
-  selector: 'app-content-list',
-  templateUrl: './content-list.component.html',
+  selector: 'app-car-list',
+  templateUrl: './car-list.component.html',
   standalone: true,
-  styleUrls: ['./content-list.component.css']
+  imports: [
+    CarListItemComponent,
+    NgForOf
+  ],
+  styleUrls: ['./car-list.component.css']
 })
 export class CarListComponent {
   chosenContent = 'car';
-  carList: Car[] = [
-    {
-      type: 'toyota',
-      model: 'camry',
-      vinNumber: 4545,
-      color: 'black',
-      brand: 'Toyota',
-      hasOwner: false,
-      image: 'download.jpg'
-    },
-    {
-      type: 'ford',
-      model: 'mustang',
-      vinNumber: 2709,
-      color: 'blue',
-      brand: 'Ford',
-      hasOwner: true,
-      image: 'mustang.jpg'
-    },
-    {
-      type: 'tesla',
-      model: 'model X',
-      vinNumber: 6757,
-      color: 'black',
-      brand: 'Tesla',
-      hasOwner: false,
-      image: 'tesla.jpg'
-    },
-    {
-      type: 'honda',
-      model: 'civic',
-      vinNumber: 5614,
-      color: 'black',
-      brand: 'Honda',
-      hasOwner: true,
-      image: 'civic.jpg'
-    }
-  ];
+  mockContent: car[] = [];
+
+
+constructor (private carService: carService){
+  //this constructor is primarily used for dependency injection
 }
+
+
+ngOnInit() {
+  //This lifecycle hook is a good place to fetch and init our data
+  this.carService.getCar().subscribe({
+    next: (data: car[]) => this.mockContent = data,
+    error: err => console.error("Error fetching Students", err),
+    complete: () => console.log("Student data fetch complete!")
+  })
+}
+}
+
+
 
