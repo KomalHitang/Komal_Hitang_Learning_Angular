@@ -11,6 +11,6 @@ import {car} from "../car/car";
   styleUrls: ['./car-list-item.component.css']
 })
 export class CarListItemComponent {
-  @Input() car!:car; // Use this to accept car data
+  @Input() car?:car; // Use this to accept car data
 
 }

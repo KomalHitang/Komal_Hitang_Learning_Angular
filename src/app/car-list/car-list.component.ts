@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { car } from '../car/car';
 import {CarListItemComponent} from "../car-list-item/car-list-item.component";
 import {carService} from "../service/car.service";
@@ -17,7 +17,7 @@ import {NgForOf} from "@angular/common";
   ],
   styleUrls: ['./car-list.component.css']
 })
-export class CarListComponent {
+export class CarListComponent implements OnInit{
   chosenContent = 'car';
   mockContent: car[] = [];
 
