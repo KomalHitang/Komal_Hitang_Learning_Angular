@@ -5,13 +5,13 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {carService} from "../Services/car.service";
 
 @Component({
-  selector: 'app-car-detail',
+  selector: 'app-car-list-item',
   standalone: true,
   imports: [
     NgIf
   ],
-  templateUrl: './car-detail.component.html',
-  styleUrl: './car-detail.component.scss'
+  templateUrl: './car-list-item.component.html',
+  styleUrl: './car-list-item.component.css'
 })
 export class carDetailComponent implements OnInit{
   //Needs to be | undef because there wont always be a car thats clicked on
@@ -27,14 +27,14 @@ export class carDetailComponent implements OnInit{
 //rewrite onInit to get the list of car and the current student
   ngOnInit(): void {
     this.carService.getcar().subscribe((car) => {
-      this.mockContent.push(car);
+      this.mockContent = car;
 
       // Subscribe to paramMap changes to actually see the page changing
       //If we dont do this, the URL will change but the view will not
       this.route.paramMap.subscribe(params => {
         const id = Number(params.get('id'));
         if (id) {
-          this.currentIndex = this.mockContent.findIndex(user => car.id === id);
+          this.currentIndex = this.mockContent.findIndex(car => car.id === id);
           this.car = this.mockContent[this.currentIndex];
         }
       });

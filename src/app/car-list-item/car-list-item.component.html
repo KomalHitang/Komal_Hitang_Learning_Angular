@@ -1,10 +1,10 @@
 <div *ngIf="car" class="car-detail">
   <h2>Car Details</h2>
   <p><strong>ID:</strong> {{ car.id }}</p>
-  <p><strong>Name:</strong> {{ car.name }}</p>
+  <p><strong>color:</strong> {{ car.color }}</p>
   <p><strong>Year:</strong> {{ car.year }}</p>
   <p><strong>Model:</strong> {{ car.model }}</p>
   <button (click)="goBackward()" [disabled]="currentIndex === 0">Previous</button>
-  <button (click)="goForward()" [disabled]="currentIndex === userList.length - 1">Next</button>
+  <button (click)="goForward()" [disabled]="currentIndex === mockContent.length - 1">Next</button>
   <button (click)="goBack()">Back to car List</button>
 </div>

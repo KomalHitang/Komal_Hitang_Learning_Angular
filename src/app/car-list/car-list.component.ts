@@ -1,13 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-// @ts-ignore
-import { User} from "../Shared/Models/user";
 import {NgForOf} from "@angular/common";
-// @ts-ignore
-import {carDetailComponent} from "../car-detail/car-detail.component";
-// @ts-ignore
+
 import {carService} from "../Services/car.service";
 import {RouterLink} from "@angular/router";
 import {Car} from "../car/car";
+import {carDetailComponent} from "../car-list-item/car-list-item.component";
 @Component({
   selector: 'app-car-list',
   standalone: true,
@@ -19,9 +16,9 @@ import {Car} from "../car/car";
   templateUrl: './car-list.component.html',
   styleUrl: './car-list.component.scss'
 })
-export class StudentListComponent implements OnInit {
+export class CarListComponent implements OnInit {
   //Placeholder values for the table
-  chosenContent:string[]= ['id', 'name', 'year', 'model'];
+  chosenContent:string[]= ['id', 'color', 'year', 'model'];
   mockContent: Car[] = [];
 
   constructor (private carService: carService){
@@ -38,12 +35,11 @@ export class StudentListComponent implements OnInit {
     })
 
   }
-  selectedcar?: User;
-  selectcar(car: User): void {
+  selectedcar?: Car;
+  selectcar(car: Car): void {
     this.selectedcar = car;
   }
 
 }
 
-export class carListComponent {
-}
+
