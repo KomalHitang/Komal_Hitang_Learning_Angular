@@ -1,21 +1,20 @@
 <div class="container">
-  <h2>Student List</h2>
+  <h2>car List</h2>
   <table>
     <thead>
     <tr>
-      <th>ID</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Department</th>
-      <th>Admin</th>
+      <th>id</th>
+      <th>name</th>
+      <th>year</th>
+      <th>model</th>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let student of mockContent" [routerLink]="['/students',student.id ]">
-      <td>{{ student.id }}</td>
-      <td>{{ student.name }}</td>
-      <td>{{ student.year }}</td>
-      <td>{{ student.model}}</td>
+    <tr *ngFor="let car of mockContent" [routerLink]="['/car',car.id]">
+      <td>{{ car.id }}</td>
+      <td>{{ car.name }}</td>
+      <td>{{ car.year }}</td>
+      <td>{{ car.model}}</td>
     </tr>
     </tbody>
   </table>
