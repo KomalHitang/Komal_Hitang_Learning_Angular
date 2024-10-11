@@ -1,7 +1,24 @@
-<div>
-  <h1>Car List</h1>
-  <div *ngFor="let Car of carList; even as isEven; " [class]="isEven ? 'even-item': 'odd-item'">
-    <app-car-list-item class="app-car-list-item" [car]="Car"></app-car-list-item>
-  </div>
+<div class="container">
+  <h2>Student List</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Department</th>
+      <th>Admin</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let student of mockContent" [routerLink]="['/students',student.id ]">
+      <td>{{ student.id }}</td>
+      <td>{{ student.name }}</td>
+      <td>{{ student.year }}</td>
+      <td>{{ student.model}}</td>
+    </tr>
+    </tbody>
+  </table>
+
 </div>
 
