@@ -1,4 +1,4 @@
-<!-- modify-student.component.html -->
+<!-- modify-car.component.html -->
 <form [formGroup]="carForm" (ngSubmit)="onSubmit()">
   <!-- ID Field -->
   <div class="form-group">
@@ -6,28 +6,22 @@
     <input type="number" id="id" formControlName="id" />
   </div>
 
-  <!-- First Name Field -->
+  <!--  Name Field -->
   <div class="form-group">
-    <label for="firstName">Model</label>
-    <input type="text" id="firstName" formControlName="firstName" />
+    <label for="name">Name</label>
+    <input type="text" id="name" formControlName="name" />
   </div>
 
-  <!-- Last Name Field -->
+  <!-- year Field -->
   <div class="form-group">
-    <label for="lastName">Last Name</label>
-    <input type="text" id="lastName" formControlName="lastName" />
+    <label for="year">Year</label>
+    <input type="text" id="year" formControlName="year" />
   </div>
 
-  <!-- Department Field -->
+  <!-- model Field -->
   <div class="form-group">
-    <label for="department">Department</label>
-    <input type="text" id="department" formControlName="department" />
-  </div>
-
-  <!-- Is Admin Checkbox -->
-  <div class="form-group">
-    <label for="isAdmin">Is Admin</label>
-    <input type="checkbox" id="isAdmin" formControlName="isAdmin" />
+    <label for="model">Model</label>
+    <input type="text" id="model" formControlName="model" />
   </div>
 
   <!-- Submit Button (Add or Update) -->

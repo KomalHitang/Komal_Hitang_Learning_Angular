@@ -7,6 +7,7 @@ import {carDetailComponent} from "../car-detail/car-detail.component";
 // @ts-ignore
 import {carService} from "../Services/car.service";
 import {RouterLink} from "@angular/router";
+import {Car} from "../car/car";
 @Component({
   selector: 'app-car-list',
   standalone: true,
@@ -21,7 +22,7 @@ import {RouterLink} from "@angular/router";
 export class StudentListComponent implements OnInit {
   //Placeholder values for the table
   chosenContent:string[]= ['id', 'name', 'year', 'model'];
-  mockContent: User[] = [];
+  mockContent: Car[] = [];
 
   constructor (private carService: carService){
     //this constructor is primarily used for dependency injection
@@ -30,8 +31,8 @@ export class StudentListComponent implements OnInit {
 
   ngOnInit(){
     //This lifecycle hook is a good place to fetch and init our data
-    this.carService.getStudents().subscribe({
-      next: (data: User[]) => this.mockContent = data,
+    this.carService.getcar().subscribe({
+      next: (data: Car[]) => this.mockContent = data,
       error: (err: any) => console.error("Error fetching car", err),
       complete:() => console.log("Student data fetch complete!")
     })

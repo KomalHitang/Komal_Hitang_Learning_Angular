@@ -1,2 +1,15 @@
 
-<app-car-list> </app-car-list>
+<!-- Future Nav bar-->
+<div class="nav-bar">
+  <nav>
+    <a routerLink="/car" routerLinkActive="active">car List</a>
+    <a routerLink="/modify-car" routerLinkActive="active">Modify car</a>
+  </nav>
+</div>
+
+<div class="app-container">
+  <h1>{{ title }}</h1>
+
+  <!--router outlet to display routed components -->
+  <router-outlet></router-outlet>
+</div>

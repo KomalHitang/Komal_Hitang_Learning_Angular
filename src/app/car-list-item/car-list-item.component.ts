@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {car} from "../car/car";
+import {Car} from "../car/car";
 import {NgIf} from "@angular/common";
 import {ActivatedRoute, Router} from "@angular/router";
 import {carService} from "../Services/car.service";
@@ -15,8 +15,8 @@ import {carService} from "../Services/car.service";
 })
 export class carDetailComponent implements OnInit{
   //Needs to be | undef because there wont always be a car thats clicked on
-  car: car | undefined; //The car to display
-  mockContent: car[] = [];// to store the list of car
+  car: Car | undefined; //The car to display
+  mockContent: Car[] = [];// to store the list of car
   currentIndex: number = 0;//to track the current index
 
   constructor(
@@ -26,8 +26,8 @@ export class carDetailComponent implements OnInit{
   ) {}
 //rewrite onInit to get the list of car and the current student
   ngOnInit(): void {
-    this.carService.getStudents().subscribe(car => {
-      this.mockContent = car;
+    this.carService.getcar().subscribe((car) => {
+      this.mockContent.push(car);
 
       // Subscribe to paramMap changes to actually see the page changing
       //If we dont do this, the URL will change but the view will not

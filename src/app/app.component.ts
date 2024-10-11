@@ -1,20 +1,18 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import {NgForOf} from "@angular/common";
-import{NgIf} from "@angular/common";
-import {Car} from "./car/car";
-import {CarListComponent} from "./car-list/car-list.component";
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
+import {JsonPipe, NgForOf} from "@angular/common";
+import {carListComponent} from "./car-list/car-list.component";
 
 @Component({
-
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgForOf, NgIf, CarListComponent],
+  imports: [RouterOutlet, NgForOf, JsonPipe, carListComponent, RouterLink, RouterLinkActive],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'untitled';
+  title= 'car Management System';
+
 
 
 }
