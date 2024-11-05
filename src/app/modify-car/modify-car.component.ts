@@ -63,6 +63,7 @@ export class ModifyCarComponent implements OnInit{
     }
 
     this.router.navigate(['/car']);
+    this.carForm.reset();
   }
 
   onDelete(): void {
@@ -71,6 +72,10 @@ export class ModifyCarComponent implements OnInit{
       this.carService.deletecar(id);
       this.router.navigate(['/car']);
     }
+  }
+  resetForm() {
+    this.carForm.reset();
+    this.router.navigate(['/list']);
   }
 
   navigateTocarList(): void {
