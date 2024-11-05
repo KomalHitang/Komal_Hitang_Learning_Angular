@@ -20,6 +20,8 @@ export class CarListComponent implements OnInit {
   //Placeholder values for the table
   chosenContent:string[]= ['id', 'color', 'year', 'model'];
   mockContent: Car[] = [];
+  private cars: any;
+  private router: any;
 
   constructor (private carService: carService){
     //this constructor is primarily used for dependency injection
@@ -38,6 +40,14 @@ export class CarListComponent implements OnInit {
   selectedcar?: Car;
   selectcar(car: Car): void {
     this.selectedcar = car;
+  }
+  editCar(id: number) {
+    this.router.navigate([`/modify/${id}`]);
+  }
+
+  deleteCar(id: number) {
+    this.carService.deletecar(id);
+    this.cars = this.carService.getcar(); // Refresh the list
   }
 
 }
