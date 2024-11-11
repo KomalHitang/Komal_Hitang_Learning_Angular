@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 //import our mock data
-import {userList} from "../Shared/mockStudent.data";
+
 import {catchError, Observable,  throwError} from 'rxjs';
 import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {mockContent} from "../car/mockcar.data";
