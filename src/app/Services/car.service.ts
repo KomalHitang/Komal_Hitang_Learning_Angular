@@ -49,3 +49,9 @@ export class StudentService {
     return throwError(() => new Error('Server error, please try again.'));
   }
 }
+
+export class carService {
+  getCar() {
+
+  }
+}
